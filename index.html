@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber OSINT Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="cyber-dashboard">
+        <header>
+            <h1>OSINT Cyber Dashboard</h1>
+        </header>
+        
+        <section class="terminal">
+            <h2>Simulated Terminal</h2>
+            <div class="terminal-output">
+                <p>$ osint-tool --scan <span class="command">[target]</span></p>
+                <p>Scanning... <span class="loading">[#####-----]</span></p>
+            </div>
+        </section>
+
+        <section class="data-visualization">
+            <h2>Dynamic Data Visualizations</h2>
+            <div class="chart">
+                <div class="bar" style="height: 75%; background-color: #00ff00;"></div>
+                <div class="bar" style="height: 50%; background-color: #ff0000;"></div>
+                <div class="bar" style="height: 90%; background-color: #0000ff;"></div>
+            </div>
+        </section>
+
+        <section class="network-map">
+            <h2>Network Map</h2>
+            <div class="network-node" style="top: 10%; left: 20%;">Node 1</div>
+            <div class="network-node" style="top: 40%; left: 50%;">Node 2</div>
+            <div class="network-node" style="top: 70%; left: 30%;">Node 3</div>
+        </section>
+
+        <section class="encryption">
+            <h2>Encryption/Decryption Effects</h2>
+            <div class="encryption-box">
+                <p class="encrypted-text">Encrypted: 8f6d3b9a2c1e...</p>
+                <button class="decrypt-button">Decrypt</button>
+                <p class="decrypted-text hidden">Decrypted: Hello, OSINT!</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+```
