@@ -1,0 +1,136 @@
+body {
+    background-color: #0b0c10;
+    color: #c5c6c7;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#cyber-dashboard {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.pulsating-indicator {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #66fcf1;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(102, 252, 241, 0.5);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.data-packet {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #45a29e;
+    border-radius: 5px;
+    animation: movePacket 5s linear infinite;
+}
+
+@keyframes movePacket {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+    25% {
+        transform: translate(calc(100vw - 50px), calc(100vh - 50px));
+    }
+    50% {
+        transform: translate(-50%, calc(100vh - 50px));
+    }
+    75% {
+        transform: translate(calc(100vw - 50px), -50%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+.typing-effect {
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(30, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.network-visualization {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+}
+
+.node {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff4081;
+    border-radius: 50%;
+    animation: bob 2s ease-in-out infinite;
+}
+
+@keyframes bob {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.line {
+    position: absolute;
+    width: 2px;
+    background-color: rgba(102, 252, 241, 0.5);
+    animation: draw 2s ease-in infinite;
+}
+
+@keyframes draw {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100px; /* Adjust based on desired line length */
+    }
+}
+```
